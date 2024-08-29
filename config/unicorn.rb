@@ -6,7 +6,7 @@ require File.expand_path('../../app.rb', __FILE__)
 # Make sure elasticsearch is configured correctly
 UnicornHelpers.exit_on_invalid_index
 
-worker_processes Integer(ENV['WORKER_PROCESSES'] || 4)
+worker_processes Integer(ENV['WORKER_PROCESSES'] || 1)
 timeout 25
 preload_app true
 data_dir = ENV['DATA_DIR'] || Dir.tmpdir
